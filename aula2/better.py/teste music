@@ -1,0 +1,24 @@
+import time
+import os
+
+os.system('cls' if os.name == 'nt' else 'clear')
+
+lyrics = [
+    ("Ella camina y prende la pista", 0,05, 0,2),
+    ("su cintura tiene magia y conquista", 0.5, 0,2),
+    ("ven aqui, ven aqui, no te resistas", 0.12, 2.0),
+    ("contigo el ritmo nunca se acaba", 0.12, 2.0),
+    ("ven aqui, ven aqui, no te resistas", 0.12, 2.0),
+    ("contigo el ritmo nunca se acaba", 0.12, 2.0),
+    ("yo perdi la cuenta de cuantas noches", 0.12, 2.0),
+    ("sone contigo bajo estos derroches", 0.12, 2.0),
+    ("tu cuerpo y el mio hablan el mismo idioma", 0.12, 2.0),
+    ("si tu me lo pides yo dejo hasta el aroma", 0.12, 2.0),
+]
+
+for line, char_delay, line_delay in lyrics:
+    for char in line:
+     print(char, end='', flush=True)
+    time.sleep(char_delay)
+    print()
+    time.sleep(line_delay)
