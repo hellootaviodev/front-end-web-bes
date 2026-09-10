@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição para o Exame Hunter</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Inscrição para o Exame Hunter</h1>
+    <p>Associação Hunter — Cadastro de novos candidatos</p>
+  </header>
+
+  <main>
+    <section>
+
+      <h2>Ficha do candidato</h2>
+
+      <p>
+        Preencha os dados abaixo para participar da próxima etapa
+        do Exame Hunter.
+      </p>
+
+      <form
+        action="https://postman-echo.com/post"
+        method="post"
+        enctype="multipart/form-data"
+      >
+
+        <fieldset>
+          <legend>Identificação</legend>
+
+          <div>
+            <label for="foto_id">Foto do candidato:</label>
+            <input
+              id="foto_id"
+              name="foto"
+              type="file"
+              accept="image/*"
+            >
+          </div>
+
+          <div>
+            <label for="nome_id">Nome completo:</label>
+            <input
+              id="nome_id"
+              name="nome"
+              type="text"
+              placeholder="Ex.: Gon Freecss"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="apelido_id">Apelido:</label>
+            <input
+              id="apelido_id"
+              name="apelido"
+              type="text"
+              placeholder="Como deseja ser chamado"
+            >
+          </div>
+
+          <div>
+            <label for="nascimento_id">Data de nascimento:</label>
+            <input
+              id="nascimento_id"
+              name="nascimento"
+              type="date"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="idade_id">Idade:</label>
+            <input
+              id="idade_id"
+              name="idade"
+              type="number"
+              min="12"
+              max="99"
+              required
+            >
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Contato e origem</legend>
+
+          <div>
+            <label for="email_id">E-mail:</label>
+            <input
+              id="email_id"
+              name="email"
+              type="email"
+              placeholder="candidato@exemplo.com"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="telefone_id">Telefone:</label>
+            <input
+              id="telefone_id"
+              name="telefone"
+              type="tel"
+              placeholder="(47) 99999-9999"
+              pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+              title="Digite no formato (47) 99999-9999"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="cidade_id">Cidade de origem:</label>
+            <input
+              id="cidade_id"
+              name="cidade_origem"
+              type="text"
+              placeholder="Ex.: Ilha da Baleia"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="regiao_id">Região de origem:</label>
+
+            <select
+              id="regiao_id"
+              name="regiao_origem"
+              required
+            >
+              <option value="">Selecione uma região</option>
+              <option value="ilha_baleia">
+                Ilha da Baleia
+              </option>
+              <option value="republica_padokea">
+                República de Padokea
+              </option>
+              <option value="cidade_meteorito">
+                Cidade Meteorito
+              </option>
+              <option value="outra">
+                Outra região
+              </option>
+            </select>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Perfil Hunter</legend>
+
+          <div>
+            <label for="nen_id">Conhecimento de Nen:</label>
+
+            <select
+              id="nen_id"
+              name="conhecimento_nen"
+              required
+            >
+              <option value="">Selecione seu nível</option>
+              <option value="nenhum">
+                Ainda não conheço Nen
+              </option>
+              <option value="basico">
+                Conhecimento básico
+              </option>
+              <option value="intermediario">
+                Conhecimento intermediário
+              </option>
+              <option value="avancado">
+                Conhecimento avançado
+              </option>
+            </select>
+          </div>
+
+          <div>
+            <label for="aura_id">Categoria de aura:</label>
+
+            <select
+              id="aura_id"
+              name="categoria_aura"
+            >
+              <option value="desconhecida">
+                Ainda não sei
+              </option>
+              <option value="reforco">
+                Reforço
+              </option>
+              <option value="transformacao">
+                Transformação
+              </option>
+              <option value="emissao">
+                Emissão
+              </option>
+              <option value="materializacao">
+                Materialização
+              </option>
+              <option value="manipulacao">
+                Manipulação
+              </option>
+              <option value="especializacao">
+                Especialização
+              </option>
+            </select>
+          </div>
+
+          <div>
+            <p>Área Hunter desejada:</p>
+
+            <input
+              id="area_tesouros_id"
+              name="area_hunter"
+              type="radio"
+              value="tesouros"
+              required
+            >
+            <label for="area_tesouros_id">
+              Hunter de Tesouros
+            </label>
+
+            <input
+              id="area_gourmet_id"
+              name="area_hunter"
+              type="radio"
+              value="gourmet"
+            >
+            <label for="area_gourmet_id">
+              Hunter Gourmet
+            </label>
+
+            <input
+              id="area_crimes_id"
+              name="area_hunter"
+              type="radio"
+              value="crimes"
+            >
+            <label for="area_crimes_id">
+              Blacklist Hunter
+            </label>
+          </div>
+
+          <div>
+            <p>Habilidades que possui:</p>
+
+            <input
+              id="habilidade_combate_id"
+              name="habilidades"
+              type="checkbox"
+              value="combate"
+            >
+            <label for="habilidade_combate_id">
+              Combate
+            </label>
+
+            <input
+              id="habilidade_estrategia_id"
+              name="habilidades"
+              type="checkbox"
+              value="estrategia"
+            >
+            <label for="habilidade_estrategia_id">
+              Estratégia
+            </label>
+
+            <input
+              id="habilidade_sobrevivencia_id"
+              name="habilidades"
+              type="checkbox"
+              value="sobrevivencia"
+            >
+            <label for="habilidade_sobrevivencia_id">
+              Sobrevivência
+            </label>
+
+            <input
+              id="habilidade_rastreamento_id"
+              name="habilidades"
+              type="checkbox"
+              value="rastreamento"
+            >
+            <label for="habilidade_rastreamento_id">
+              Rastreamento
+            </label>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Motivação</legend>
+
+          <div>
+            <label for="objetivo_id">
+              Por que deseja se tornar um Hunter?
+            </label>
+
+            <textarea
+              id="objetivo_id"
+              name="objetivo"
+              rows="5"
+              placeholder="Conte qual é o seu principal objetivo..."
+              required
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="experiencia_id">
+              Experiência ou treinamento anterior:
+            </label>
+
+            <textarea
+              id="experiencia_id"
+              name="experiencia"
+              rows="4"
+              placeholder="Descreva suas experiências"
+            ></textarea>
+          </div>
+
+        </fieldset>
+
+        <div>
+          <button type="reset">
+            Limpar ficha
+          </button>
+
+          <button type="submit">
+            Enviar inscrição
+          </button>
+        </div>
+
+      </form>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Associação Hunter &copy; 2026 —
+      Todos os direitos reservados.
+    </p>
+  </footer>
+
+</body>
+</html>
