@@ -1,0 +1,12 @@
+    .pagina {
+display: grid;
+grid-template-columns: 200px 1fr;
+grid-template-areas:
+"cabecalho cabecalho"
+"menu conteudo"
+"rodape rodape";
+}
+.cabecalho { grid-area: cabecalho; }
+.menu { grid-area: menu; }
+.conteudo { grid-area: conteudo; }
+.rodape { grid-area: rodape; }
